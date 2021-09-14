@@ -8,6 +8,18 @@ btn.addEventListener("click", function(e) {
 
     const value = name.value;
 
-    console.log(value);
+    document.getElementById('codigo').innerHTML = value;
+
+});
+
+const copy = document.getElementById("copy");
+
+copy.addEventListener("click", function(e) {
+
+    const code = document.getElementById("codigo");
+
+    code.select();
+
+    document.execCommand('copy');
 
 });
